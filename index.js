@@ -8,6 +8,7 @@
 // server.listen(3000,  () => {console.log("Server Ready")})
 
 require('dotenv').config()
+const cors = require('cors')
 
 const express = require("express");
 const app = express();
@@ -16,6 +17,7 @@ const fruits = require("./fruits");
 
 
 // must be first route
+app.use(cors())
 app.use(express.json())
 
 //Routes
